@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 
 pragma solidity >=0.8.0 <0.9.0;
-
+//0x5B38Da6a701c568545dCfcB03FcB875f56beddC4
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/extensions/ERC20Capped.sol";
 
@@ -25,3 +25,5 @@ contract CreateToken is ERC20 {
    
 }
 
+//  uint _index = beneficiaryDetails[msg.sender].length;
+//         beneficiaryDetails[msg.sender][_index] = beneficiarydata
