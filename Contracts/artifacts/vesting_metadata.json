@@ -11,7 +11,13 @@
 					{
 						"indexed": false,
 						"internalType": "address",
-						"name": "Tokenaddrress",
+						"name": "beneficiary",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "Tokenaddress",
 						"type": "address"
 					},
 					{
@@ -19,52 +25,9 @@
 						"internalType": "uint256",
 						"name": "tokens",
 						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "duration",
-						"type": "uint256"
 					}
 				],
 				"name": "tokensLocked",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "tokensUnLocked",
 				"type": "event"
 			},
 			{
@@ -78,25 +41,18 @@
 					},
 					{
 						"indexed": false,
+						"internalType": "address",
+						"name": "Tokenaddress",
+						"type": "address"
+					},
+					{
+						"indexed": false,
 						"internalType": "uint256",
 						"name": "tokens",
 						"type": "uint256"
 					}
 				],
 				"name": "tokensWithdrawn",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "whitelisted",
 				"type": "event"
 			},
 			{
@@ -117,11 +73,6 @@
 					{
 						"internalType": "address",
 						"name": "addressOfToken",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "beneficiary",
 						"type": "address"
 					},
 					{
@@ -242,19 +193,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "tokensLeft",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -332,12 +270,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"Contracts/vesting.sol": {
-			"keccak256": "0x18d39e11d2421d60819c1d2e325083268369a4ae9c929017b098365d746d53db",
+		"@openzeppelin/contracts/utils/math/SafeMath.sol": {
+			"keccak256": "0x0f633a0223d9a1dcccfcf38a64c9de0874dfcbfac0c6941ccf074d63a2ce0e1e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1b49406bcbd990d6aeb898d51808b20c3f93ccbce56b08e5aebde2e7c9cf4dad",
-				"dweb:/ipfs/QmePWpqoZn3zrWmqHj5SAxDme2gw5AwHaLQLvY4pSwPou6"
+				"bzz-raw://864a40efcffdf408044c332a5aa38ec5618ed7b4eecb8f65faf45671bd6cdc65",
+				"dweb:/ipfs/QmQJquTMtc6fgm5JQzGdsGpA2fqBe3MHWEdt2qzaLySMdN"
+			]
+		},
+		"Contracts/vesting.sol": {
+			"keccak256": "0xae36817eb9057e9ab2b04cd3d61e1d1559796601b24984b0f0b2c11d4a07816e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://243e375fb4b926625360a0c5f0fdc301a0179fe519728b61527378e7fbcfebe4",
+				"dweb:/ipfs/Qmeisp22AE6QY4heYT1srZapwSqtVbiTBMCKRELQeheZ1g"
 			]
 		},
 		"https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol": {
