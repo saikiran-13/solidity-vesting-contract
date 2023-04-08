@@ -62,8 +62,8 @@ contract vesting{
         token = IERC20(beneficiaryDetails[msg.sender][index].addressOfToken);
         uint tokensLeft=unlockTokens(index);
         require(tokensLeft!=0);
-        token.transfer(msg.sender,tokensLeft);
         releasedTokens[msg.sender][index]+=tokensLeft;
+        token.transfer(msg.sender,tokensLeft);
         address Tokenaddress = beneficiaryDetails[msg.sender][index].addressOfToken;
         emit tokensWithdrawn(msg.sender,Tokenaddress,releasedTokens[msg.sender][index]);
     }
